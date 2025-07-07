@@ -1,0 +1,132 @@
+.main-container {
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
+}
+
+.main-left-container {
+  width: 300px;
+  height: 100vh;
+  background: var(--color-mlcbg-primary);
+}
+
+.main-right-container {
+  width: calc(100% - 300px);
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.save-note-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 150px;
+  height: 50px;
+  background: rgba(0, 28, 47, 0.439);
+  border-radius: 15px;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 20px;
+  color: var(--color-font-primary);
+  cursor: pointer;
+}
+
+.save-note-button:hover {
+    background: grey;
+}
+
+.main-right-header-container {
+  height: 100px;
+  background: var(--color-mrhcbg-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3rem;
+  font-family: var(--font-primary);
+  font-size: 30px;
+  color: var(--color-font-primary);
+  border-bottom: 1px solid black;
+}
+
+.main-right-note-container {
+  height: calc(100% - 100px);
+  padding: 2rem;
+  background: var(--color-mrncbg-primary);
+  font-family: var(--font-primary);
+  color: var(--color-font-text);
+  font-size: 20px;
+}
+
+.main-right-note-container:focus {
+  border: none;
+  outline: none;
+}
+
+.main-left-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.main-left-header-container {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.notes-left-header {
+  font-size: 40px;
+  font-family: var(--font-primary);
+  color: var(--color-font-primary);
+}
+
+.main-left-notes-container {
+  height: calc(100% - 130px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.left-note-cell {
+  background: var(--color-lncbg-primary);
+  height: 60px;
+  margin-block: 0.25rem;
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+.left-note-cell:hover {
+    background: rgb(160, 160, 160);
+}
+
+.left-note-name {
+  font-family: "Quintessential";
+  font-size: 16px;
+  color: var(--color-font-primary);
+}
+
+.add-note-container {
+  height: 60px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 0.5rem;
+  border-top: 1px solid black;
+}
+
+.add-note-button {
+  background: none;
+  border: none;
+  color: var(--color-font-primary);
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.add-note-button:hover {
+  color: grey;
+}

@@ -1,0 +1,13 @@
+
+
+:root {
+    --font-primary: 'Quintessential', sans-serif;
+    
+
+    --color-font-primary: white;
+    --color-font-text: rgb(60, 60, 60);
+    --color-mlcbg-primary: rgb(49, 72, 76);
+    --color-lncbg-primary: rgba(217, 217, 217, 31%);
+    --color-mrhcbg-primary: rgb(96, 114, 117);
+    --color-mrncbg-primary: rgb(145, 154, 155);
+}
