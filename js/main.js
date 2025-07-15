@@ -1,10 +1,21 @@
-import { showCurrentTime } from './components.js'
-import { getAllNotes } from './dataLoader.js'
+import { showCurrentTime, addNewNote } from './components.js'
+import { createAllSideNotes } from './renderer.js'
+
+init()
 
 
-setInterval(() => {
-    showCurrentTime();
-}, 1000)
+function init() {
+    setInterval(() => {
+        showCurrentTime();
+    }, 1000)
+    
+    
+    createAllSideNotes()
 
-
-getAllNotes();
+    let button = document.querySelector('.add-note-button');
+    button.addEventListener('click', () => {
+        addNewNote()
+       
+    })
+    
+}

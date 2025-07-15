@@ -18,6 +18,7 @@ export async function getAllNotes() {
         let data = await response.json();
 
         console.log('data ' + data);
+        return data
     } else {
         console.log('error ' + response.status)
     }
