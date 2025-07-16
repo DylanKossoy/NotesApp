@@ -1,5 +1,6 @@
-import { showSelectedNote } from './renderer.js'
+import { createAllSideNotes, showSelectedNote } from './renderer.js'
 import { notes } from '../data/notes.js'
+import { getNote } from './dataStore.js'
 
 
 export function showCurrentTime() {
@@ -22,7 +23,19 @@ export function showCurrentTime() {
 
 }
 
-export function saveNote(note) {
+export function saveNote() {
+
+    let note = getNote()
+    if(!note) return
+
+    let currentName = document.querySelector('.right-name-note').value
+    let currentNote = document.querySelector('.main-right-note-container').value
+
+    note.name = currentName
+    note.note = currentNote
+    createAllSideNotes()
+
+   
     
 }
 

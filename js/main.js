@@ -1,5 +1,6 @@
-import { showCurrentTime, addNewNote } from './components.js'
+import { showCurrentTime, addNewNote, saveNote } from './components.js'
 import { createAllSideNotes } from './renderer.js'
+
 
 init()
 
@@ -17,6 +18,13 @@ function init() {
         addNewNote()
         createAllSideNotes()
        
+    })
+
+    let saveButton = document.querySelector('.save-note-button');
+
+    saveButton.addEventListener('click', () => {
+      saveNote()
+        
     })
     
 }

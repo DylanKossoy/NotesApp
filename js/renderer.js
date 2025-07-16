@@ -1,5 +1,6 @@
-import { createSideNote } from './components.js'
+import { createSideNote, saveNote } from './components.js'
 import { getAllNotes } from './dataLoader.js'
+import { setNote } from './dataStore.js'
 
 
 
@@ -20,6 +21,8 @@ export function createAllSideNotes() {
 
 
 export function showSelectedNote(note) {
+
+    setNote(note)
     let nameOfNote = document.querySelector('.right-name-note')
     let noteArea = document.querySelector('.main-right-note-container');
 
@@ -30,6 +33,8 @@ export function showSelectedNote(note) {
 
     nameOfNote.value = note.name
     noteArea.value = note.note
+
+    
 
 
 
