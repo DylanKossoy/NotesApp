@@ -58,6 +58,7 @@
   font-family: var(--font-primary);
   color: var(--color-font-text);
   font-size: 20px;
+  resize: none;
 }
 
 .main-right-note-container:focus {
