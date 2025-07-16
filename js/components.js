@@ -1,4 +1,5 @@
-
+import { showSelectedNote } from './renderer.js'
+import { notes } from '../data/notes.js'
 
 
 export function showCurrentTime() {
@@ -36,6 +37,12 @@ export function createSideNote(note) {
     noteName.textContent = note.name
 
     noteCell.appendChild(noteName)
+    noteCell.tabIndex = 0;
+
+
+    noteCell.addEventListener('click', () => {
+        showSelectedNote(note)
+    })
 
 
     return noteCell
@@ -45,30 +52,17 @@ export function createSideNote(note) {
 
 // add new note +
 
-export async function addNewNote() {
+export function addNewNote() {
 
-    const newObj = {
-        name: 'note',
-        note: 'notenote',
-        lastSaved: '2999',
-        lastUpdated: '4444'
+    let newObj = {
+        name: 'undefined',
+        note: ''
     }
 
 
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type' : 'application/json',
-        },
-        data: JSON.stringify(newObj)
-    }
-
-
-    let response = await fetch('../data/notes.json', options)
-
-
-    console.log(response.status);
-    
+    notes.push(newObj);
+ 
 }
+
 
 

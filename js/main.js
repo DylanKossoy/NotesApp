@@ -15,6 +15,7 @@ function init() {
     let button = document.querySelector('.add-note-button');
     button.addEventListener('click', () => {
         addNewNote()
+        createAllSideNotes()
        
     })
     

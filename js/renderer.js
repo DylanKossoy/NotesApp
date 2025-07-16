@@ -4,9 +4,9 @@ import { getAllNotes } from './dataLoader.js'
 
 
 
-export async function createAllSideNotes() {
+export function createAllSideNotes() {
     let container = document.querySelector('.main-left-notes-container');
-    let notes = await getAllNotes();
+    let notes = getAllNotes();
 
     container.textContent = ''
     
@@ -19,7 +19,19 @@ export async function createAllSideNotes() {
 }
 
 
-export function showProject(project) {
-    let nameOfProject = document.querySelector('.right-name-note')
+export function showSelectedNote(note) {
+    let nameOfNote = document.querySelector('.right-name-note')
     let noteArea = document.querySelector('.main-right-note-container');
+
+
+    nameOfNote.value = ''
+    noteArea.value = ''
+
+
+    nameOfNote.value = note.name
+    noteArea.value = note.note
+
+
+
+
 }

@@ -1,27 +1,9 @@
+import { notes } from '../data/notes.js'
 
 
+export function getAllNotes() {
 
-export async function getAllNotes() {
-
-    const options = {
-        method: 'GET',
-        headers: {
-            'Content-Type' : 'application/json'
-        }
-    }
-
-    let response = await fetch('./data/notes.json', options);
-
-    console.log(response.status);
-
-    if(response.status === 200) {
-        let data = await response.json();
-
-        console.log('data ' + data);
-        return data
-    } else {
-        console.log('error ' + response.status)
-    }
+    return notes
 
 }
 
